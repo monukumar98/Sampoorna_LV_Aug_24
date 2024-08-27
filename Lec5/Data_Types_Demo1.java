@@ -28,7 +28,7 @@ public class Data_Types_Demo1 {
 		System.out.println(c);
 		c++;
 		System.out.println(c);
-		int x =  (2147483648l);
+		int x = (int) (2147483648l);
 		System.out.println(x);
 
 	}
