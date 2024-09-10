@@ -17,7 +17,7 @@ public class Majority_Element {
 			} else {
 				vote--;
 				if (vote == 0) {
-					e = arr[0];
+					e = arr[i];
 					vote = 1;
 				}
 			}
