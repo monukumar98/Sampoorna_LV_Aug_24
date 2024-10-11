@@ -15,8 +15,8 @@ public class Permutation_2 {
 			return;
 		}
 		for (int i = 0; i < ques.length(); i++) {
-			char ch = ques.charAt(i);// i+1 se completev same char nhi hona chahiye
-			if (Is_present(ques, ch, i + 1) == false) {
+			char ch = ques.charAt(i);// i+1 se complete String same char nhi hona chahiye
+			if (Is_present(ques, ch, i) == false) {
 				String s1 = ques.substring(0, i);
 				String s2 = ques.substring(i + 1);
 				Print(s1 + s2, ans + ch);
@@ -26,7 +26,7 @@ public class Permutation_2 {
 	}
 
 	public static boolean Is_present(String s, char ch, int idx) {
-		for (int i = idx + 1; i < s.length(); i++) {
+		for (int i = idx + 1; i < s.length(); i++) {// i+1 se check
 			if (s.charAt(i) == ch) {
 				return true;
 			}
