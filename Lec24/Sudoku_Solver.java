@@ -15,7 +15,7 @@ public class Sudoku_Solver {
 			}
 			System.out.println();
 		}
-
+		
 	}
 
 	public static boolean SudokuSolver(int[][] grid, int row, int col) {
