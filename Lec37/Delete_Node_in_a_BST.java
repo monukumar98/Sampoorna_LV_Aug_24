@@ -27,8 +27,8 @@ public class Delete_Node_in_a_BST {
 			}
 			if (root.val < key) {
 				root.right = deleteNode(root.right, key);
-			}
-			if (root.val > key) {
+			} 
+			else if (root.val > key) {
 				root.left = deleteNode(root.left, key);
 			} else {
 				// 0 or 1 chlid
@@ -37,7 +37,9 @@ public class Delete_Node_in_a_BST {
 				} else if (root.right == null) {
 					return root.left;
 				} else {// both
-
+					int max = max(root.left);// 9
+					root.left = deleteNode(root.left, max);
+					root.val = max;
 				}
 
 			}
@@ -45,25 +47,13 @@ public class Delete_Node_in_a_BST {
 		}
 
 		public int max(TreeNode root) {
-			if(root==null) {
+			if (root == null) {
 				return Integer.MIN_VALUE;
 			}
-			int r =max(root.right);
+			int r = max(root.right);
 			return Math.max(root.val, r);
 
 		}
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
