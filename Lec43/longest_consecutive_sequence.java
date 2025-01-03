@@ -21,6 +21,7 @@ public class longest_consecutive_sequence {
 				int c = 0;
 				int v = arr[i];
 				while (set.contains(v)) {
+					   set.remove(v);
 					c++;
 					v++;
 				}
